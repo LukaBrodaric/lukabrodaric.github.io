@@ -7,6 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="dizajn.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js%22%3E</script>
+        <script type=" text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('user_V4tABAWDmOxuYydEUIsil');
+            })();
+        </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_d8mju2n', 'service_d8mju2n', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
     <title>Luka Brodaric</title>
 </head>
 
@@ -211,7 +236,7 @@
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Ukoliko vas zanimaju neke informacije slobodno
                     pošaljite upit.</p>
             </div>
-            <form action="https://formspree.io/f/mpzkezal" method="POST">
+            <form>
                 <div class="lg:w-1/2 md:w-2/3 mx-auto">
                     <div class="flex flex-wrap -m-2">
                         <div class="p-2 w-1/2">
