@@ -1,327 +1,819 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="dizajn.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_V4tABAWDmOxuYydEUIsil');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_d8mju2n', 'template_v6puo28', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
 
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
     <title>Luka Brodaric</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/target-customer.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
-    <header class="text-gray-400 bg-gray-900 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                <span class="ml-3 text-xl">Luka Brodarič</span>
-            </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a href="https://lukabrodaric.github.io/" class="mr-5 hover:text-white">Home</a>
-                <a href="#O-meni" class="mr-5 hover:text-white">O meni</a>
-                <a href="#Portfolio" class="mr-5 hover:text-white">Portfolio</a>
-                <a href="#Kontakt" class="mr-5 hover:text-white">Kontakt</a>
-            </nav>
 
-        </div>
-    </header>
+    <!--====== PRELOADER PART START ======-->
 
-    <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-col">
-            <section id="O-meni">
-                <div class="lg:w-4/6 mx-auto">
-            </section>
-            <div>
-                <div class="floating"
-                    style="text-align: center; font-size: 75px; margin-bottom: 250px; margin-top: 80px; ">DOBRODOŠLI
-                </div>
-
-
-
-
-
-
-
-            </div>
-            <div class="flex flex-col sm:flex-row mt-10">
-                <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                    <div
-                        class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                            <img class="rounded-full" style="border: 1cm;" src="img/slika3.jpg">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-
-                        </svg>
-                    </div>
-                    <div class="flex flex-col items-center text-center justify-center">
-                        <h2 class="font-medium title-font mt-4 text-white text-lg">Luka Brodarič</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
-                        <p class="text-base text-gray-400">“A designer knows he has achieved perfection not when
-                            there is nothing left to add, but when there is nothing left to take away.”</p>
+    <div class="preloader">
+        <div class="loader_34">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
                     </div>
                 </div>
-                <div
-                    class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                    <p class="leading-relaxed text-lg mb-4">Moje ime je Luka Brodarič, imam 20 godina te
-                        sam student druge godine na
-                        Fakultetu Informatike u Puli. Moj najveći hobi je video montaža, te prilika oglašavanja na
-                        društvenim mrežama putem promotivnih video zapisa. Znanje sam stekao pohađajuči Google
-                        Digital Garage tečajeve, honorarnim radom na UpWork te Fiverr platformama te studirajući na
-                        Fakultetu Informatike u Puli.
-                    </p>
-                </div>
             </div>
-            <section id="Portfolio">
         </div>
-    </section>
     </div>
 
+    <!--====== PRELOADER ENDS START ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <header id="home" class="header-area">
+        <div class="navigation fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <h3>Luka Brodarič</h3>
+                            </a> <!-- Logo -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#service">Services</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#work">Portfolio</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navigation -->
+
+        <div id="parallax" class="header-content d-flex align-items-center">
+            <div class="header-shape shape-one layer" data-depth="0.10">
+                <img src="assets/images/banner/shape/shape-1.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-tow layer" data-depth="0.30">
+                <img src="assets/images/banner/shape/shape-2.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-three layer" data-depth="0.40">
+                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-fore layer" data-depth="0.60">
+                <img src="assets/images/banner/shape/shape-2.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-five layer" data-depth="0.20">
+                <img src="assets/images/banner/shape/shape-1.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-six layer" data-depth="0.15">
+                <img src="assets/images/banner/shape/shape-4.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-seven layer" data-depth="0.50">
+                <img src="assets/images/banner/shape/shape-5.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-eight layer" data-depth="0.40">
+                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-nine layer" data-depth="0.20">
+                <img src="assets/images/banner/shape/shape-6.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="header-shape shape-ten layer" data-depth="0.30">
+                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
+            </div> <!-- header shape -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="header-content-right">
+                            <h4 class="sub-title">Hello, I’m</h4>
+                            <h1 class="title">Luka Brodarič</h1>
+                            <p>A Freelance Web Developer & Content Creator </p>
+                            <a class="main-btn page-scroll" href="#work">View my Work</a>
+                        </div> <!-- header content right -->
+                    </div>
+                    <div class="col-lg-6 offset-xl-1">
+                        <div class="header-image d-none d-lg-block">
+                            <img src="assets/images/banner/hero.png" alt="hero">
+                        </div> <!-- header image -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-social">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/lukabrodaric33/"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a href="https://www.instagram.com/luka.brodaric/"><i class="lni-instagram-original"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCLiftUtt_HrI2O-q_RwOO2A"><i class="lni-youtube"></i></a></li>
+                                    <li><a href="https://hr.linkedin.com/in/lukabrodaric"><i class="lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div> <!-- header social -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- header social -->
+        </div> <!-- header content -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about-area pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="title">About Me</h2>
+                      <!--  <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>-->
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content mt-50">
+                        <h5 class="about-title">Hi There! I'm Luka Brodarič</h5>
+                        <p>I'm 21 years old ICT student from Pula, Croatia. I'm specialized in content creation and web development. I have experience in digial marketing and managing social networks as well as advertising on platforms like Facebook and Instagram. My goal is always to focus on helping my clients achieve their business goals. </p>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="single-info d-flex align-items-center">
+                                    <div class="info-icon">
+                                        <i class="lni-envelope"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <p><span>Email:</span> lbrodaric@unipu.hr</p>
+                                    </div>
+                                </div> <!-- single info -->
+                            </li>
+                            <li>
+                                <div class="single-info d-flex align-items-center">
+                                    <div class="info-icon">
+                                        <i class="lni-phone-handset"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <p><span>Phone:</span> +385995702209</p>
+                                    </div>
+                                </div> <!-- single info -->
+                            </li>
+                        </ul>
+                    </div> <!-- about content -->
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-6">
+                    <div class="about-skills pt-25">
+                        <div class="skill-item mt-25">
+                            <div class="skill-header">
+                                <h6 class="skill-title">WORDPRESS</h6>
+                                <div class="skill-percentage">
+                                    <div class="count-box counted">
+                                        <span class="counter">80</span>
+                                    </div>
+                                    %
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div> <!-- skill item -->
+                        <div class="skill-item mt-25">
+                            <div class="skill-header">
+                                <h6 class="skill-title">HTML & CSS</h6>
+                                <div class="skill-percentage">
+                                    <div class="count-box counted">
+                                        <span class="counter">60</span>
+                                    </div>
+                                    %
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width="60"></div>
+                                </div>
+                            </div>
+                        </div> <!-- skill item -->
+                        <div class="skill-item mt-25">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Video editing</h6>
+                                <div class="skill-percentage">
+                                    <div class="count-box counted">
+                                        <span class="counter">50</span>
+                                    </div>
+                                    %
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width="50"></div>
+                                </div>
+                            </div>
+                        </div> <!-- skill item -->
+                        <div class="skill-item mt-25">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Content creation</h6>
+                                <div class="skill-percentage">
+                                    <div class="count-box counted">
+                                        <span class="counter">90</span>
+                                    </div>
+                                    %
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div> <!-- skill item -->
+                    </div> <!-- about skills -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
     </section>
-    <section class="text-gray-400 bg-gray-900 body-font">
 
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap -m-4">
+    <!--====== ABOUT PART ENDS ======-->
 
-                <div class="p-4 lg:w-1/3">
-                    <div
-                        class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">FREELANCING</h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">UpWork - Fiverr</h1>
-                        <p class="leading-relaxed mb-3">Nakon stotine odgledanih videa, probao sam pronaći neke
-                            zanimljive projekte na raznim freelancing stranicama, na Fiverr-u te UpWork-u sam stekao
-                            najviše iskustva i znanja.</p>
-                        <a href="https://www.fiverr.com/" class="text-blue-400 inline-flex items-center">Learn More
-                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                        <div
-                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                            <span
-                                class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>1.2K
-                            </span>
-                            <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path
-                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                                    </path>
-                                </svg>6
-                            </span>
-                        </div>
-                    </div>
+    <!--====== SERVICES PART START ======-->
+
+    <section id="service" class="services-area gray-bg pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center pb-30">
+                        <h2 class="title">My Services</h2>
+                        <p>Here you can check all of my services. Even if you need something  extra apart from this, feel free to contact me! I work with the goal of exceeding all expectations, putting a big smile on each client's face.</p>
+                    </div> <!-- section title -->
                 </div>
-                <div class="p-4 lg:w-1/3">
-                    <div
-                        class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">YOUTUBE</h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Video Editor - PcShop.hr
-                        </h1>
-                        <p class="leading-relaxed mb-3">Snimanje i montaža promotivnih videa, te izrada grafika za firmu
-                            www.pcshop.hr iz Zagreba. &nbsp;&nbsp;</br></br></p>
-                        <a href="https://www.youtube.com/c/PCShop_Zagreb/about"
-                            class="text-blue-400 inline-flex items-center">Learn More
-                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                        <div
-                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                            <span
-                                class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>127K
-                            </span>
-                            <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path
-                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                                    </path>
-                                </svg>790
-                            </span>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-code-alt"></i>
                         </div>
-                    </div>
-                </div>
-                <div class="p-4 lg:w-1/3">
-                    <div
-                        class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">SOCIAL MEDIA</h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Social media manager</h1>
-                        <p class="leading-relaxed mb-3">Izrada promotivnog sadržaja, objava, nagradnih igara te vođenje
-                            društvenih mreža </br></br></p>
-                        <a href="https://www.instagram.com/define_marketing/"
-                            class="text-blue-400 inline-flex items-center">Learn More
-                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                        <div
-                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                            <span
-                                class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>24K
-                            </span>
-                            <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path
-                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                                    </path>
-                                </svg>14
-                            </span>
+                        <div class="service-content">
+                            <h4 class="service-title">Web Design</h4>
+                            <p>Quality website has become the key to success in modern business. Whether you are a small business or a large company everyone expects you to have a well-made website because it is a mirror of your business.</p>
                         </div>
-                    </div>
+                    </div> <!-- single service -->
                 </div>
-            </div>
-            <p class="leading-normal my-5">
-            </p>
-        </div>
-        <section id="Kontakt">
-            <div></div>
-        </section>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-color-pallet"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Brand Design</h4>
+                            <p>Brand is a name, term, design, symbol or any other feature that identifies a service or product of a retailer, and differs from other sellers. A good brand name makes a good first impression and evokes the positive associations that bind to it.</p>
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-mobile"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Figma UI</h4>
+                            <p>Creating prototype in Figma is crucial thing to do when creating an app or website. I can create unique and professional website, landing page or even mobile application and admin dashboard in Figma with eye-catching design. </p>
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-vector"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Content creation</h4>
+                            <p>With good content creation you can reach your target audience and grow an organic following group whilst keeping a consistent look and feel across your feed. Your Social Media Content is what grows your business!</p>
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-website"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Video editing</h4>
+                            <p>No matter what you have, if its a raw video or a concept in your head I will bring it to reality with a professional touch. My goal is to make your video, intro our outro engaging, and popping out more regardless you are Youuber or a business owner.</p>
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-service text-center mt-30">
+                        <div class="service-icon">
+                            <i class="lni-support"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Consultancy and Support</h4>
+                            <p>It all begins with an idea. Approach to me with your thoughts and I will make your idea come alive. Platforms like YouTube, Instagram, Facebook, or even TikTok and Twitter are all great for every business or company.</p>
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
     </section>
 
+    <!--====== SERVICES PART ENDS ======-->
 
+    <!--====== CALL TO ACTION PART START ======-->
 
-    <section class="text-gray-400 bg-gray-900 body-font relative">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-col text-center w-full mb-12">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Kontaktiraj me</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Ukoliko vas zanimaju neke informacije slobodno
-                    pošaljite upit.</p>
-            </div>
-            <form id="contact-form">
-                <div class="lg:w-1/2 md:w-2/3 mx-auto">
-                    <div class="flex flex-wrap -m-2">
-                        <div class="p-2 w-1/2">
-                            <div class="relative">
-                                <input type="hidden" name="contact_number">
-                                <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
-                                <input type="text" name="user_name"
-                                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+    <section id="call-to-action" class="call-to-action pt-125 pb-130 bg_cover" style="background-image: url(assets/images/call-to-action.jpg)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9">
+                    <div class="call-action-content text-center">
+                        <h2 class="action-title">Have any project on mind?</h2>
+                        <p>Feel free to contact me about any question you have or any project on your mind!</p>
+                        <ul>
+                           <!-- <li><a class="main-btn custom" href="/assets/Legal Business.xlsx">download cv</a></li> -->
+                            <li><a class="main-btn custom-2 page-scroll" href="#contact">hire me</a></li>
+                        </ul>
+                    </div> <!-- call action content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CALL TO ACTION PART ENDS ======-->
+
+    <!--====== WORK PART START ======-->
+
+    <section id="work" class="service-area pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center
+            
+            ">
+                <div class="col-lg-9 ">
+                    <div class="section-title text-center pb-30">
+                        <h2 class="title">My Recent Projects</h2>
+                        <p>Here you can check some of my recent projects. If you want to see more feel free to contact me or check my social media where you can find all updates.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/W-1.png" alt="work">
+                        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">Personal YouTube Channel</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-1.png"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCLiftUtt_HrI2O-q_RwOO2A" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="p-2 w-1/2">
-                            <div class="relative">
-                                <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
-                                <input type="email" name="user_email"
-                                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div> <!-- single work -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/W-4.png" alt="work">
+                        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">CryptoTracker</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-2.png"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://fipucryptotracker.netlify.app/" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="p-2 w-full">
-                            <div class="relative">
-                                <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
-                                <textarea id="message" name="message"
-                                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-
+                    </div> <!-- single work -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/W-2.png" alt="work">
+                        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">PCSHOP YouTube Channel</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-3.png"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCI1i2k-HjjIlzr6Sk3O1c6w" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="p-2 w-full">
-                            <button
-                                class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">SEND</button>
+                    </div> <!-- single work -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/W-3.png" alt="work">
                         </div>
-
-            </form>
-            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-                <a class="text-blue-400">lbrodaric@unipu.hr</a>
-                <p class="leading-normal my-5">
-                </p>
-                <span class="inline-flex">
-                    <a class="text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-4 text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path
-                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="ml-4 text-gray-500">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-4 text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path
-                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                            </path>
-                        </svg>
-                    </a>
-                </span>
-            </div>
-        </div>
-        </div>
-        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">Freelance</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-4.jpg"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://www.upwork.com/" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single work -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/w-5.png" alt="work">
+                        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">iTurizam</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-5.png"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://www.facebook.com/iTurizam.info" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single work -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-work text-center mt-30">
+                        <div class="work-image">
+                            <img src="assets/images/work/w-6.png" alt="work">
+                        </div>
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3 class="work-title">DefineMark Marketing Agency</h3>
+                                <ul>
+                                    <li><a class="image-popup" href="assets/images/work/work-6.png"><i class="lni-plus"></i></a></li>
+                                    <li><a href="https://www.definemark.com" target=”_blank”><i class="lni-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- single work -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="work-more text-center mt-50">
+                        <a class="main-btn" href="https://www.youtube.com/channel/UCLiftUtt_HrI2O-q_RwOO2A" target=”_blank”>more works</a>
+                    </div> <!-- work more -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
     </section>
 
-    <footer class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+    <!--====== WORK PART ENDS ======-->
 
-                <span class="ml-3 text-xl">Luka Brodarič</span>
-            </a>
-            <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
-                2021 —
-                <a href="https://www.instagram.com/luka.brodaric" class="text-gray-500 ml-1" target="_blank"
-                    rel="noopener noreferrer">@luka.brodaric</a>
-            </p>
+    <!-- ====== PRICING PART START ====== 
 
-        </div>
+    <section id="pricing" class="pricing-area gray-bg pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center pb-25">
+                        <h2 class="title">My Pricing Plans</h2>
+                        <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    </div>  section title 
+                </div>
+            </div> 
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-pricing text-center mt-30">
+                        <div class="pricing-package">
+                            <h4 class="package-title">Basic</h4>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-text">
+                                <p>Simple project management for teams and small businesses.</p>
+                                <span class="price">$19.00</span>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>Unlimited Tasks</li>
+                                    <li>Unlimited Public</li>
+                                    <li>Private Projects</li>
+                                    <li>Unlimited Teams</li>
+                                    <li>All Integrations</li>
+                                    <li>Public API</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a class="main-btn" href="#contact">get quote</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-pricing active text-center mt-30">
+                        <div class="pricing-package">
+                            <h4 class="package-title">Standard</h4>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-text">
+                                <p>Simple project management for teams and small businesses.</p>
+                                <span class="price">$39.00</span>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>Unlimited Tasks</li>
+                                    <li>Unlimited Public</li>
+                                    <li>Private Projects</li>
+                                    <li>Unlimited Teams</li>
+                                    <li>All Integrations</li>
+                                    <li>Public API</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a class="main-btn" href="#contact">get quote</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-pricing text-center mt-30">
+                        <div class="pricing-package">
+                            <h4 class="package-title">Premium</h4>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-text">
+                                <p>Simple project management for teams and small businesses.</p>
+                                <span class="price">$29.00</span>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>Unlimited Tasks</li>
+                                    <li>Unlimited Public</li>
+                                    <li>Private Projects</li>
+                                    <li>Unlimited Teams</li>
+                                    <li>All Integrations</li>
+                                    <li>Public API</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a class="main-btn" href="#contact">get quote</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+  ====== PRICING PART ENDS ====== -->
+
+
+
+    <!--====== BLOG PART START ======
+
+    <section id="blog" class="blog-area pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center pb-25">
+                        <h2 class="title">From The Blog</h2>
+                        <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    </div> 
+                </div>
+            </div> 
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-blog mt-30">
+                        <div class="blog-image">
+                            <img src="assets/images/blog/b-1.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
+                            <span>July 26, 2022</span>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-blog mt-30">
+                        <div class="blog-image">
+                            <img src="assets/images/blog/b-2.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
+                            <span>July 26, 2022</span>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-blog mt-30">
+                        <div class="blog-image">
+                            <img src="assets/images/blog/b-3.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
+                            <span>July 26, 2022</span>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-more text-center mt-50">
+                        <a class="main-btn" href="#">More posts</a>
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    ====== BLOG PART ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+
+    <section id="contact" class="contact-area pt-125 pb-130 gray-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center pb-25">
+                        <h2 class="title">Get In Touch</h2>
+                        <p>Feel free to contact me if you have any question about my projects or if you want to work with me.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <!--
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="contact-box text-center mt-30">
+                        <div class="contact-icon">
+                            <i class="lni-map-marker"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h6 class="contact-title">Address</h6>
+                            <p>123 Stree New York City , United States Of America 750</p>
+                        </div>
+                    </div>  contact box 
+                </div> -->
+                <!--
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="contact-box text-center mt-30">
+                        <div class="contact-icon">
+                            <i class="lni-phone"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h6 class="contact-title">Phone</h6>
+                            <p>+931 2222 5555</p>
+                            <p>+547 5554 6663</p>
+                        </div>
+                    </div>  contact box 
+                </div> -->
+                <!--
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="contact-box text-center mt-30">
+                        <div class="contact-icon">
+                            <i class="lni-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h6 class="contact-title">Email</h6>
+                            <p>support@yourmail.com</p>
+                            <p>info@helpline.com</p>
+                        </div>
+                    </div>  contact box 
+                </div>
+            </div>  --> <!-- row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-form pt-30">
+                        <form id="contact-form" action="assets/contact.php">
+                            <div class="single-form">
+                                <input type="text" name="name" placeholder="Name">
+                            </div> <!-- single form -->
+                            <div class="single-form">
+                                <input type="email" name="email" placeholder="Email">
+                            </div> <!-- single form -->
+                            <div class="single-form">
+                                <textarea name="message" placeholder="Message"></textarea>
+                            </div> <!-- single form -->
+                            <p class="form-message"></p>
+                            <div class="single-form">
+                                <button class="main-btn" type="submit">Send Message</button>
+                            </div> <!-- single form -->
+                        </form>
+                    </div> <!-- contact form -->
+                </div>
+                <div class="col-lg-6">
+                    
+                    <div class="contact-map mt-60">
+                        <div class="gmap_canvas">                            
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=52100%20pula&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>  <!-- contact map -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+    <footer id="footer" class="footer-area">
+        <div class="footer-widget pt-130 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="footer-content text-center">
+                           <!-- <a href="index.html">
+                                <img src="assets/images/logo-2.png" alt="Logo">
+                            </a> -->
+                            <p class="mt-">© Copyright Luka Brodarič. All rights reserved.</p>
+                            <ul>
+                                <li><a href="https://www.facebook.com/lukabrodaric33/"><i class="lni-facebook-filled"></i></a></li>
+                                <li><a href="https://www.instagram.com/luka.brodaric/"><i class="lni-instagram-original"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCLiftUtt_HrI2O-q_RwOO2A"><i class="lni-youtube"></i></a></li>
+                                <li><a href="https://hr.linkedin.com/in/lukabrodaric"><i class="lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div> <!-- footer content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
     </footer>
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+
+
+
+
+
+
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Parallax js ======-->
+    <script src="assets/js/parallax.min.js"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+
+    <!--====== Appear js ======-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+
+    <!--====== Scrolling js ======-->
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
 
 </body>
 
